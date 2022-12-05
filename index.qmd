@@ -1,0 +1,12 @@
+---
+title: "j0nasw.github.io"
+author: ""
+description: "This is the Homepage!"
+sidebar: false
+search: false
+reader-mode: false
+---
+
+This is a Quarto website.
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
