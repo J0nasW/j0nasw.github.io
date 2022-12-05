@@ -8,7 +8,7 @@ website:
   page-navigation: true
   reader-mode: true
   search: true
-  favicon: favicon.png
+  #favicon: favicon.png
 
   open-graph:
     locale: de_DE
