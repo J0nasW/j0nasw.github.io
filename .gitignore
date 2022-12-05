@@ -1,6 +1,7 @@
 # Output files
 _site/
 .quarto/
+docs/
 *.html
 *_files/
 

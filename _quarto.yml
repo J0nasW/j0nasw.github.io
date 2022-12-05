@@ -56,3 +56,6 @@ format:
     toc-depth: 2
     toc-title: Contents
     author: "Jonas Wilinski"
+
+execute:
+  freeze: auto
