@@ -1,36 +1,67 @@
 project:
   type: website
 
+execute:
+  freeze: auto
+
 website:
-  title: "Jonas Wilinski"
-  site-url: https://j0nasw.github.io
-  repo-url: https://github.com/j0nasw/j0nasw.github.io
-  page-navigation: true
-  reader-mode: true
+  # title: "TUHH Institute of Entrepreneurship"
+  site-url: https://tuhhstartupengineers.github.io
+  # repo-url: https://github.com/j0nasw/j0nasw.github.io
+  page-navigation: false
+  reader-mode: false
   search: true
-  #favicon: favicon.png
+  favicon: assets/logo/logo_tie_kompakt.svg
+
+  cookie-consent:
+    type: implied
+    style: simple
+    palette: dark
+    policy-url: /privacy.qmd
+
+  twitter-card: true
 
   open-graph:
     locale: de_DE
-    site-name: Jonas Wilinski
+    site-name: TUHH Institute of Entrepreneurship
 
   navbar:
     pinned: true
+    logo: "assets/logo/logo_tie.svg"
+    logo-alt: "TIE Logo"
+    logo-href: index.qmd
     left:
       - href: index.qmd
         text: Home
+      - href: news.qmd
+        text: News
+      - href: research.qmd
+        text: Research
+      - href: teaching.qmd
+        text: Teaching
+      - href: transfer.qmd
+        text: Transfer
       - href: about.qmd
-        text: About Me
+        text: About
     right:
+
+      - icon: envelope
+        href: "{{<var website.mail>}}"
+        aria-label: Drop us a Mail
       - icon: github
-        href: "{{<var author.github>}}"
-        aria-label: Quarto GitHub
-      - icon: linkedin
-        href: "{{<var author.linkedin>}}"
-        aria-label: Quarto LinkedIn
-      - icon: send-fill
-        href: mailto:jonas@wilinski.me
-        aria-label: Quarto Mail
+        menu:
+          - text: "TIE Profile"
+            url: "{{<var author.github>}}"
+          - text: "Source Code"
+            url: "{{<var website.github>}}"
+          - text: "Report a Bug"
+            url: "{{<var website.github_bug>}}"
+      - icon: box-arrow-in-right
+        menu:
+          - text: "Courses"
+            url: teaching.qmd
+          - text: "Logos & Templates"
+            url: resources.qmd
       # Icons can be found at https://icons.getbootstrap.com/
 
   sidebar:
@@ -40,18 +71,23 @@ website:
 
   page-footer:
     left:
-      © {{< var website.c_year >}} by [{{< var author.name >}}]({{< var author.url >}})
+      © {{< var website.c_year >}} by [{{< var author.name >}}]({{< var author.url >}})<br>
+      [Imprint](/imprint.qmd) | [Data Privacy](/privacy.qmd)
     right:
       Made with {{< var tech.quarto >}}<br>
       View the source at [GitHub]({{< var website.github >}})
+    border: false
+    background: light
 
 format:
   html:
     theme:
-      light: flatly
-      dark: darkly
-    css: styles.css
+      light:
+        - "themes/jw_light.scss"
+      dark: 
+        - "themes/jw_dark.scss"
     toc: true
     toc-depth: 2
     toc-title: Contents
-    author: "Jonas Wilinski"
+    author: "TIE"
+    page-layout: full

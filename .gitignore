@@ -1,27 +1,9 @@
-# Output files
-_site/
-.quarto/
-docs/
-*.html
-*_files/
-
-# History files
-.Rhistory
-.Rapp.history
-
-# Session Data files
-.RData
-.RDataTmp
-
-# User-specific files
-.Ruserdata
-
-# RStudio files
-.rproj
-.Rproj.user/
-jwarz.github.io.Rproj
-
-# Ignore Mac DS_Store files
-.DS_Store
-**/.DS_Store
+# Quarto related files
 /.quarto/
+/_site/
+/.luarc.json
+
+# Custom files
+.DS_Store
+
+

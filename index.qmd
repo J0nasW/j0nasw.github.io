@@ -1,12 +1,187 @@
 ---
-title: "j0nasw.github.io"
+title: ""
+pagetitle: "TIE - Institute of Entrepreneurship"
+page-layout: custom
+description: "We are a research institute at Hamburg University of Technology that aims to provide data-driven research in the domains of Entrepreneurship, Entrepreneurial Finance, Venture Capital as well as Green Technologies and AI."
 author: ""
-description: "This is the Homepage!"
+toc: false
 sidebar: false
-search: false
+search: true
 reader-mode: false
+listing:
+  - id: news
+    contents: posts/**/*.qmd
+    type: grid
+    fields: [image, title, subtitle, reading-time, categories, description, author, date]
+    sort: "date desc"
+    #categories: cloud
+    sort-ui: [title, date]
+    filter-ui: true
+    page-size: 3
 ---
+```{=html}
+<div class="hero-banner overlay">
+    <video autoplay loop muted class="hero-banner video">
+        <source src="assets/vid/deepmind_01.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    
+      <div class="vertical-bottom">
+        <p clas="hero-banner h3">Hey, my name is</p>
+        <h1 clas="hero-banner h1">Jonas Wilinski</h1>
+        <h3 clas="hero-banner h3">And this is my Website.</h3>
+      </div>
+    </video>
+</div>
+```
 
-This is a Quarto website.
+```{=html}
+<div class="introduction" label="#intro">
+    <h1 class="introduction-h1">
+        Established in 
+        <span class="text-feature">June 2014</span>
+         and headed by 
+        <span class="text-feature">Prof. Christoph Ihl</span>.
+    </h1>
+    <p class="introduction-p">
+        The Institute of Entrepreneurship at Hamburg University of Technology is an academic institution that aims to provide data-driven research in the domains of Entrepreneurship, Entrepreneurial Finance, Venture Capital as well as Green Technologies and AI.
+    </p>
+</div>
+```
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+```{=html}
+<div class="section" label="#objectives">
+    <span class="section_span">Objectives</span>
+    <h2 class="section_h2">
+        Our Objectives Unlock the Potential of
+        <span class="section_span_highlight">Entrepreneurship</span>
+         and 
+        <span class="section_span_highlight">Data Science</span>
+    </h2>
+
+    <div class="grid gap-4" style="padding-bottom: 80px">
+      <div class="feature g-col-12 g-col-sm-6 g-col-md-4 d-flex flex-column">
+        <p><img src="assets/icons/research.svg" class="img-fluid"></p>
+        <h3 style="margin-top:0px">Research</h3>
+        <p>We strive to do rigor and relevant research about innovation and entrepreneurship from perspectives of organization theory, sociology and strategy. As data enthusiasts, we love to apply state-of-art computational and econometric methods to novel, large-scale data sets.</p>
+        <button type="button" class="mt-auto btn btn-primary">Find out more</button>
+      </div>
+      <div class="feature g-col-12 g-col-sm-6 g-col-md-4 d-flex flex-column">
+        <p><img src="assets/icons/teaching.svg" class="img-fluid"></p>
+        <h3 style="margin-top:0px">Teaching</h3>
+        <p>We are convinced that entrepreneurship can be learned and good training increases the odds of entrepreneurial success. To that end, our teaching is problem- and project-based so that students can gain first-hand, real-life experience that inspires and enables them to become the next generation of Startup Engineers.</p>
+        <button type="button" class="mt-auto btn btn-primary">Find out more</button>
+      </div>
+      <div class="feature g-col-12 g-col-sm-6 g-col-md-4 d-flex flex-column">
+        <p><img src="assets/icons/transfer.svg" class="img-fluid"></p>
+        <h3 style="margin-top:0px">Transfer</h3>
+        <p>We are open to collaborate with corporates, startups and associations to transfer our knowledge about data science and startup engineering into Practice. Possible modes of collaboration are master theses, applied research and data science projects, consulting, talks, workshops or trainings.</p>
+        <button type="button" class="mt-auto btn btn-primary">Find out more</button>
+      </div>
+    </div>
+</div>
+```
+
+```{=html}
+<div class="news" label="#news">
+  <span class="news_span">News</span>
+  <h2 class="news-h2">
+      Recent News and Events 
+      <span class="section_span_highlight">@TIE</span>.
+  </h2>
+</div>
+```
+
+
+::: {#news}
+:::
+
+```{=html}
+<div class="section" label="#affiliations">
+    <span class="section_span">Affiliations</span>
+    <h2 class="section_h2">
+        Our 
+        <span class="section_span_highlight">Partners</span>
+    </h2>
+
+    <div class="container text-center py-5" style="max-width: 100%;">
+        <a href="https://www.tuhh.de/tuhh/startseite" class="brands">
+          <img class="m-3" src="assets/logo/partners/TUHH.svg" style="max-width: 200px;transform: scale(1);" />
+        </a>
+        <a href="[#](https://www.mle.hamburg/)" class="brands">
+          <img class="m-3" src="assets/logo/partners/mle.svg" style="max-width: 200px;" href="https://www.tuhh.de/tuhh/startseite"/>
+        </a>
+        <a href="http://druid.dk/" class="brands">
+          <img class="m-3" src="assets/logo/partners/druid.png" style="max-width: 200px;filter: grayscale(100%);" />
+        </a>
+        <a href="http://aom.org/" class="brands">
+          <img class="m-3" src="assets/logo/partners/AOM.png" style="max-width: 200px;filter: grayscale(100%);" />
+        </a>
+        <a href="http://www.egosnet.org/" class="brands">
+          <img class="m-3" src="assets/logo/partners/vhbtie.png" style="max-width: 200px;filter: grayscale(100%);" />
+        </a>
+        <a href="https://www.the-klu.org/event-pages/oui-conference-2023/" class="brands">
+          <img class="m-3" src="assets/logo/partners/oui.png" style="max-width: 200px;filter: grayscale(100%);" />
+        </a>
+        <a href="https://www.vhbonline.org/wk-/-fachgruppen/technologie-innovation-und-entrepreneurship-tie" class="brands">
+          <img class="m-3" src="assets/logo/partners/egos.png" style="max-width: 180px;filter: grayscale(100%);" />
+        </a>
+    </div>
+</div>
+```
+
+
+```{=html}
+<div class="section" label="#contact">
+  <span class="section_span">Contact</span>
+  <h2 class="section_h2">
+      Reach out to us
+  </h2>
+
+  <div class="grid gap-4" style="padding-bottom: 80px; width: 100%">
+    <div class="feature g-col-12 g-col-md-6 d-flex flex-column">
+      <form class="p-3 p-xl-6" method="post">
+          <div class="alert alert-danger d-flex align-items-center" role="alert">
+            The form is currently under development. Please write an E-Mail.
+          </div>
+          <div class="mb-3"><input id="name-1" class="form-control" type="text" name="name" placeholder="Name" /></div>
+          <div class="mb-3"><input id="email-1" class="form-control" type="email" name="email" placeholder="E-Mail" /></div>
+          <div class="mb-3"><textarea id="message-1" class="form-control" name="message" rows="6" placeholder="Message"></textarea></div>
+          <div><button class="btn btn-primary shadow d-block w-100" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top" type="submit" disabled>Send </button></div>
+          <small class="text-muted">By clicking Send, you are complying with our privacy policy.</small>
+
+      </form>
+    </div>
+    <div class="feature g-col-12 g-col-md-6 d-flex flex-column">
+      <div class="d-flex align-items-center p-3 flex-fill">
+          <img src="assets/icons/phone.svg" style="max-width: 50px; margin-right: 10px" class="img-fluid">
+          <div class="px-2">
+              <h6 class="fw-bold mb-0">Phone</h6>
+              <a href="tel:004940428784765" class="mb-0 section_span_highlight">+49 40 42878-4765</a>
+          </div>
+      </div>
+      <div class="d-flex align-items-center p-3 flex-fill">
+          <img src="assets/icons/mail.svg" style="max-width: 50px; margin-right: 10px" class="img-fluid">
+          <div class="px-2">
+              <h6 class="fw-bold mb-0">E-Mail</h6>
+              <a href="mailto:startup.engineer@tuhh.de" class="mb-0 section_span_highlight">startup.engineer@tuhh.de</a>
+          </div>
+      </div>
+      <div class="d-flex align-items-center p-3 flex-fill">
+          <img src="assets/icons/compass.svg" style="max-width: 50px; margin-right: 10px" class="img-fluid">
+          <div class="px-2">
+              <h6 class="fw-bold mb-0">Appointments</h6>
+              <p>You can book an appointment via <a href="https://www.tuhh.de/tuhh/startseite" class="section_span_highlight">our online calendar</a> or <a href="mailto:startup.engineer@tuhh.de" class="section_span_highlight">mail</a>.</p>
+          </div>
+      </div>
+      <div class="d-flex align-items-center p-3 flex-fill">
+          <img src="assets/icons/compass.svg" style="max-width: 50px; margin-right: 10px" class="img-fluid">
+          <div class="px-2">
+              <h6 class="fw-bold mb-0">Location</h6>
+              <a href="" class="mb-0 section_span_highlight">Am Irrgarten 5-7</br>21073 Hamburg</a>
+          </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+```
