@@ -5,63 +5,62 @@ execute:
   freeze: auto
 
 website:
-  # title: "TUHH Institute of Entrepreneurship"
-  site-url: https://tuhhstartupengineers.github.io
-  # repo-url: https://github.com/j0nasw/j0nasw.github.io
+  title: "Jonas Wilinski"
+  site-url: https://j0nasw.github.io/
+  repo-url: https://github.com/j0nasw/j0nasw.github.io
   page-navigation: false
   reader-mode: false
   search: true
-  favicon: assets/logo/logo_tie_kompakt.svg
+  favicon: assets/icons/favicon.png
+  bread-crumbs: false
 
-  cookie-consent:
-    type: implied
-    style: simple
-    palette: dark
-    policy-url: /privacy.qmd
+  # cookie-consent:
+  #   type: implied
+  #   style: simple
+  #   palette: light
+  #   policy-url: /privacy.qmd
 
   twitter-card: true
 
   open-graph:
     locale: de_DE
-    site-name: TUHH Institute of Entrepreneurship
+    site-name: Jonas Wilinski
 
   navbar:
     pinned: true
-    logo: "assets/logo/logo_tie.svg"
-    logo-alt: "TIE Logo"
+    # logo: "assets/logo/logo_tie.svg"
+    # logo-alt: "Jonas Wilinski"
     logo-href: index.qmd
     left:
       - href: index.qmd
         text: Home
-      - href: news.qmd
-        text: News
+      - href: blog.qmd
+        text: Blog
+      - href: projects.qmd
+        text: Projects
       - href: research.qmd
-        text: Research
-      - href: teaching.qmd
-        text: Teaching
-      - href: transfer.qmd
-        text: Transfer
-      - href: about.qmd
-        text: About
+        text: Research & Teaching
+      # - href: about.qmd
+      #   text: About
     right:
 
       - icon: envelope
         href: "{{<var website.mail>}}"
         aria-label: Drop us a Mail
-      - icon: github
-        menu:
-          - text: "TIE Profile"
-            url: "{{<var author.github>}}"
-          - text: "Source Code"
-            url: "{{<var website.github>}}"
-          - text: "Report a Bug"
-            url: "{{<var website.github_bug>}}"
-      - icon: box-arrow-in-right
-        menu:
-          - text: "Courses"
-            url: teaching.qmd
-          - text: "Logos & Templates"
-            url: resources.qmd
+      # - icon: github
+      #   menu:
+      #     - text: "TIE Profile"
+      #       url: "{{<var author.github>}}"
+      #     - text: "Source Code"
+      #       url: "{{<var website.github>}}"
+      #     - text: "Report a Bug"
+      #       url: "{{<var website.github_bug>}}"
+      # - icon: box-arrow-in-right
+      #   menu:
+      #     - text: "Courses"
+      #       url: teaching.qmd
+      #     - text: "Logos & Templates"
+      #       url: resources.qmd
       # Icons can be found at https://icons.getbootstrap.com/
 
   sidebar:
@@ -89,5 +88,5 @@ format:
     toc: true
     toc-depth: 2
     toc-title: Contents
-    author: "TIE"
+    # author: "JW"
     page-layout: full

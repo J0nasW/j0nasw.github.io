@@ -1,0 +1,26 @@
+---
+title: ""
+pagetitle: "JW Blog"
+page-layout: full
+# description: "Here you can read about my latest blog entries. I will try to keep this updated from time to time but cannot make any promises."
+toc: false
+sidebar: false
+search: true
+reader-mode: false
+listing:
+  - id: news
+    contents: posts/**/*.qmd
+    type: grid
+    fields: [image, title, subtitle, reading-time, categories, description, author, date]
+    sort: "date desc"
+    #categories: cloud
+    sort-ui: [title, date]
+    filter-ui: true
+    page-size: 3
+---
+
+# My latest articles
+Here you can read about my latest blog entries. I will try to keep this updated from time to time but cannot make any promises. Open to any suggestions for topics to write about.
+
+::: {#news}
+:::

@@ -1,0 +1,15 @@
+---
+title: "The AI Dictionary Project"
+description: "tbd"
+date: "2024"
+page-layout: article
+categories:
+    - artificial intelligence
+    - machine learning
+    - text mining
+# image: dl_sg_hero.jpeg
+title-block-style: default
+title-block-banner: true
+---
+
+# What is this about?

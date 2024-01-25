@@ -1,0 +1,16 @@
+---
+title: "Deep Learning for Social Graphs and Text Analytics"
+description: "A master-level course at Hamburg University of Technology (TUHH) dealing with deep learning for social graphs and text analytics."
+date: "2024"
+page-layout: article
+categories:
+    - teaching
+    - deep-learning
+    - social-graphs
+    - text-analytics
+image: dl_sg_hero.jpeg
+title-block-style: default
+title-block-banner: true
+---
+
+# Deep Learning for Social Graphs and Text Analytics

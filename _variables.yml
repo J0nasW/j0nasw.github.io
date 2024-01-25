@@ -1,17 +1,17 @@
 version: 1.0
 
 author:
-  name: Institute of Entrepreneurship
-  email: tie@tuhh.de
+  name: Jonas Wilinski
+  email: jonas@wilinski.me
   url: about.qmd
-  github: "https://github.com/TUHHStartupEngineers"
+  github: "https://github.com/J0nasW"
   profile_pic: "/assets/profile.jpeg"
 
 website:
-  c_year: "2023"
-  github: "https://github.com/TUHHStartupEngineers/StartupEngineer_v2"
-  github_bug: "https://github.com/TUHHStartupEngineers/StartupEngineer_v2/issues/new"
-  mail: "mailto:startup.engineer@tuhh.de"
+  c_year: "2024"
+  github: "https://github.com/J0nasW/j0nasw.github.io"
+  github_bug: "https://github.com/J0nasW/j0nasw.github.io/issues/new"
+  mail: "mailto:jonas@wilinski.me"
 
 tech:
   jupyter: "[Jupyter](https://jupyter.org)"

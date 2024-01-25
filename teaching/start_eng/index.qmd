@@ -1,0 +1,29 @@
+---
+title: "Startup Engineering"
+description: "A master-level short course at Hamburg University of Technology (TUHH) dealing with the creation, evaluation and financing of business models for startups."
+date: "2023"
+page-layout: article
+categories:
+    - teaching
+    - start-up
+    - entrepreneurship
+    - business-model
+image: start_eng_hero.jpg
+title-block-style: default
+title-block-banner: true
+---
+
+# Startup Engineering
+This course module introduces students to Startup Engineering, a systematic approach that involves iterative development, problem-solving, and experimental learning to take a business idea to market amid resource constraints and uncertainty. The course integrates flipped classroom discussions, problem-based learning, and experiential learning, focusing on applying theoretical concepts to real startup projects, either individually or in teams. By the end of the course, students will be skilled in applying modern innovation tools, analyzing and designing business models, and making informed decisions about business opportunities. Graduates of the course will be well-prepared for roles such as startup founders, early startup employees, corporate new business developers, or venture capital investors.
+
+## Instructors
+- [Jonas Wilinski, M. Sc.]()
+- [Oliver Specht, M. Sc.]()
+
+## Course Structure
+The workflow in this course module is comprised of three elements:
+
+- **(Flipped) classroom:** learning about and discussing concepts and tools currently prevailing in theory and practice of modern technology entrepreneurship.
+- **Problem-based learning:** deepen an understanding of the concepts and tools by seeing them applied and applying them to real company cases.
+- **Experiential learning:** applying the concepts and tools in teams to an own new startup project.
+

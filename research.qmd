@@ -1,6 +1,6 @@
 ---
-title: "Research @ TIE"
-pagetitle: "TIE - Research"
+title: ""
+pagetitle: "Research & Teaching"
 author: ""
 page-layout: full
 section-divs: false
@@ -9,33 +9,36 @@ toc: false
 sidebar: false
 search: false
 reader-mode: false
+listing:
+  - id: teaching
+    contents: teaching/**/*.qmd
+    type: grid
+    fields: [image, title, subtitle, description]
+    sort: "title asc"
+    #categories: cloud
+    # sort-ui: [title, date]
+    # filter-ui: true
+    page-size: 3
 ---
 
-```{=html}
-<div class="card-deck">
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-</div>
-```
+# My Research and Teaching Interests
+During my time as a Student and Researcher, I have been involved in a number of projects. My research interests are in the areas of **Machine Learning**, **Artificial Intelligence**, **Natural Language Processing** and **Data Science**. At the [Institute of Entrepreneurship](https://www.startupengineer.io/) ([Hamburg University of Technology](https://www.tuhh.de/)), I was involved in the course "Technology Entrepreneurship" and created a new course called "Deep Learning for Social Graphs and Text Analytics". Here you can find a selection of my publications, projects and teaching activities.
+
+
+## Publications
+During my time as a researcher at Hamburg University of Technology, I have published a number of papers in the field of Managerial Sciences using Machine Learning, Artificial Intelligence and Natural Language Processing techniques. Here you can find a selection of my publications:
+
+##### 2024
+- [**AOM Paper 2021**]() - *The Impact of Artificial Intelligence on the Future of Innovation: A quantitative approach*
+
+## Teaching
+Teaching Master-level courses at Hamburg University of Technology was a great experience for me. I was involved in the course "Technology Entrepreneurship" and created a new course called "Deep Learning for Social Graphs and Text Analytics". Here you can find a selection of my teaching activities:
+
+::: {#teaching}
+:::
+
+## 3rd Party Funded Projects
+I acquired and managed a number of projects during my time as a researcher at Hamburg University of Technology. Here you can find a selection of my projects:
+
+- [**AI StartUp Hub**](https://www.aistartuphub.com/) - *Mentoring and Knowledge Transfer for AI StartUps in the Hamburg Metropolitan Region*
+- [**SMILE**]() - *Smart Manufacturing and so on*

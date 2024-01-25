@@ -1,8 +1,8 @@
 ---
 title: ""
-pagetitle: "TIE - Institute of Entrepreneurship"
+pagetitle: "JW Home"
 page-layout: custom
-description: "We are a research institute at Hamburg University of Technology that aims to provide data-driven research in the domains of Entrepreneurship, Entrepreneurial Finance, Venture Capital as well as Green Technologies and AI."
+description: "This is my personal homepage mostly dedicated to my research and hobbies. Feel free to reach out to me if you have any questions or suggestions."
 author: ""
 toc: false
 sidebar: false
@@ -21,16 +21,25 @@ listing:
 ---
 ```{=html}
 <div class="hero-banner overlay">
-    <video autoplay loop muted class="hero-banner video">
-        <source src="assets/vid/deepmind_01.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    
-      <div class="vertical-bottom">
-        <p clas="hero-banner h3">Hey, my name is</p>
+    <div class="vertical-bottom">
+        <h3 clas="hero-banner h3">Hey, my name is</h3>
         <h1 clas="hero-banner h1">Jonas Wilinski</h1>
-        <h3 clas="hero-banner h3">And this is my Website.</h3>
-      </div>
-    </video>
+        <p class="hero-banner-p">
+          I am currently pursuing my Dr.-Ing degree at Hamburg University of Technology (TUHH).</br>
+          My research focuses on the application of machine learning and natural language processing to the field of entrepreneurship. I am also interested in the application of data science to the field of innovation and technology management.
+        </p>
+        <div class="icons">
+          <a href="https://www.linkedin.com/in/your-profile" target="_blank">
+            <img class="hero-icon" src="assets/icons/linkedin.svg" alt="LinkedIn">
+          </a>
+          <a href="mailto:your-email@example.com">
+            <img class="hero-icon" src="assets/icons/mail.svg" alt="Mail">
+          </a>
+          <a href="tel:your-phone-number">
+            <img class="hero-icon" src="assets/icons/phone.svg" alt="Phone">
+          </a>
+        </div>
+    </div>
 </div>
 ```
 

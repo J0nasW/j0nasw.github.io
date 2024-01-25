@@ -1,0 +1,28 @@
+---
+title: ""
+pagetitle: "Projects"
+author: ""
+page-layout: full
+section-divs: false
+description: "Projects"
+toc: false
+sidebar: false
+search: false
+reader-mode: false
+listing:
+  - id: projects
+    contents: projects/**/*.qmd
+    type: grid
+    fields: [image, title, date, subtitle, description]
+    sort: "date desc"
+    #categories: cloud
+    sort-ui: [title, date]
+    filter-ui: true
+    page-size: 3
+---
+
+# Projects that I have been involved in
+tbd
+
+::: {#projects}
+:::
