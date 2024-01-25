@@ -1,12 +1,26 @@
 [
   {
-    "listing": "/news.html",
+    "listing": "/research.html",
+    "items": [
+      "/teaching/dl_sg/index.html",
+      "/teaching/start_eng/index.html",
+      "/teaching/tech_ent/index.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
     "items": [
       "/posts/2022-01-10/index.html"
     ]
   },
   {
-    "listing": "/index.html",
+    "listing": "/projects.html",
+    "items": [
+      "/projects/ai_dict/index.html"
+    ]
+  },
+  {
+    "listing": "/blog.html",
     "items": [
       "/posts/2022-01-10/index.html"
     ]

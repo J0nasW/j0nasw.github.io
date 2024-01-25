@@ -1,16 +1,121 @@
 [
   {
-    "objectID": "news.html",
-    "href": "news.html",
-    "title": "Our latest news, events and publications",
-    "section": "",
-    "text": "Our latest news, events and publications\nHere you can read about our latest news, events and publications. You can also subscribe to our newsletter to receive updates about our activities. We try to keep this blog active and interesting, so please let us know if you have any suggestions or comments.\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nEntrepreneurial Exits via Acquisitions\n\n\n1 min\n\n\n\nnews\n\n\nteaching\n\n\n\nA Guest Lecture by Mark Miller from Carlsquare\n\n\n\nJonas Wilinski\n\n\nJan 10, 2022\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "posts/2022-01-10/index.html",
     "href": "posts/2022-01-10/index.html",
     "title": "Entrepreneurial Exits via Acquisitions",
     "section": "",
-    "text": "In our Entrepreneurial Finance course, we had the great pleasure to welcome Mark Miller, founding partner at Carlsquare, one of the leading consultancies in Europe for mergers & acquisitions (M&A) of growth-oriented and innovative medium-sized companies. Mark gave an insightful overview into the M&A market in Europe, Carlsquare’s approach to support an acquisition process, and two exciting case studies, rounded up by a teaser of what a career as an M&A consultant could look lilke.\nThe students very much enjoyed the talk and were engaging actively with our guest. Thank you very much, Mark! See you next time."
+    "text": "In our Entrepreneurial Finance course, we had the great pleasure to welcome Mark Miller, founding partner at Carlsquare, one of the leading consultancies in Europe for mergers & acquisitions (M&A) of growth-oriented and innovative medium-sized companies. Mark gave an insightful overview into the M&A market in Europe, Carlsquare’s approach to support an acquisition process, and two exciting case studies, rounded up by a teaser of what a career as an M&A consultant could look lilke.\nThe students very much enjoyed the talk and were engaging actively with our guest. Thank you very much, Mark! See you next time.",
+    "crumbs": [
+      "Home",
+      "Posts",
+      "Entrepreneurial Exits via Acquisitions"
+    ]
+  },
+  {
+    "objectID": "teaching/start_eng/index.html",
+    "href": "teaching/start_eng/index.html",
+    "title": "Startup Engineering",
+    "section": "",
+    "text": "This course module introduces students to Startup Engineering, a systematic approach that involves iterative development, problem-solving, and experimental learning to take a business idea to market amid resource constraints and uncertainty. The course integrates flipped classroom discussions, problem-based learning, and experiential learning, focusing on applying theoretical concepts to real startup projects, either individually or in teams. By the end of the course, students will be skilled in applying modern innovation tools, analyzing and designing business models, and making informed decisions about business opportunities. Graduates of the course will be well-prepared for roles such as startup founders, early startup employees, corporate new business developers, or venture capital investors.\n\n\n\nJonas Wilinski, M. Sc.\nOliver Specht, M. Sc.\n\n\n\n\nThe workflow in this course module is comprised of three elements:\n\n(Flipped) classroom: learning about and discussing concepts and tools currently prevailing in theory and practice of modern technology entrepreneurship.\nProblem-based learning: deepen an understanding of the concepts and tools by seeing them applied and applying them to real company cases.\nExperiential learning: applying the concepts and tools in teams to an own new startup project.",
+    "crumbs": [
+      "Home",
+      "Teaching",
+      "Startup Engineering"
+    ]
+  },
+  {
+    "objectID": "teaching/start_eng/index.html#instructors",
+    "href": "teaching/start_eng/index.html#instructors",
+    "title": "Startup Engineering",
+    "section": "",
+    "text": "Jonas Wilinski, M. Sc.\nOliver Specht, M. Sc.",
+    "crumbs": [
+      "Home",
+      "Teaching",
+      "Startup Engineering"
+    ]
+  },
+  {
+    "objectID": "teaching/start_eng/index.html#course-structure",
+    "href": "teaching/start_eng/index.html#course-structure",
+    "title": "Startup Engineering",
+    "section": "",
+    "text": "The workflow in this course module is comprised of three elements:\n\n(Flipped) classroom: learning about and discussing concepts and tools currently prevailing in theory and practice of modern technology entrepreneurship.\nProblem-based learning: deepen an understanding of the concepts and tools by seeing them applied and applying them to real company cases.\nExperiential learning: applying the concepts and tools in teams to an own new startup project.",
+    "crumbs": [
+      "Home",
+      "Teaching",
+      "Startup Engineering"
+    ]
+  },
+  {
+    "objectID": "projects/ai_dict/index.html",
+    "href": "projects/ai_dict/index.html",
+    "title": "The AI Dictionary Project",
+    "section": "",
+    "text": "What is this about?",
+    "crumbs": [
+      "Home",
+      "Projects",
+      "The AI Dictionary Project"
+    ]
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "My latest articles",
+    "section": "",
+    "text": "My latest articles\nHere you can read about my latest blog entries. I will try to keep this updated from time to time but cannot make any promises. Open to any suggestions for topics to write about.\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nEntrepreneurial Exits via Acquisitions\n\n\n1 min\n\n\n\nnews\n\n\nteaching\n\n\n\nA Guest Lecture by Mark Miller from Carlsquare\n\n\n\nJonas Wilinski\n\n\nJan 10, 2022\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "My latest articles"
+    ]
+  },
+  {
+    "objectID": "teaching/dl_sg/index.html",
+    "href": "teaching/dl_sg/index.html",
+    "title": "Deep Learning for Social Graphs and Text Analytics",
+    "section": "",
+    "text": "Deep Learning for Social Graphs and Text Analytics",
+    "crumbs": [
+      "Home",
+      "Teaching",
+      "Deep Learning for Social Graphs and Text Analytics"
+    ]
+  },
+  {
+    "objectID": "teaching/tech_ent/index.html",
+    "href": "teaching/tech_ent/index.html",
+    "title": "Technology Entrepreneurship",
+    "section": "",
+    "text": "This course module introduces students to Startup Engineering, a systematic approach that involves iterative development, problem-solving, and experimental learning to take a business idea to market amid resource constraints and uncertainty. The course integrates flipped classroom discussions, problem-based learning, and experiential learning, focusing on applying theoretical concepts to real startup projects, either individually or in teams. By the end of the course, students will be skilled in applying modern innovation tools, analyzing and designing business models, and making informed decisions about business opportunities. Graduates of the course will be well-prepared for roles such as startup founders, early startup employees, corporate new business developers, or venture capital investors.\n\n\n\nProf. Dr. Christoph Ihl\nJonas Wilinski, M. Sc.\nJürgen Thiesen, M. Sc.\nOliver Specht, M. Sc.\n\n\n\n\nThe workflow in this course module is comprised of three elements:\n\n(Flipped) classroom: learning about and discussing concepts and tools currently prevailing in theory and practice of modern technology entrepreneurship.\nProblem-based learning: deepen an understanding of the concepts and tools by seeing them applied and applying them to real company cases.\nExperiential learning: applying the concepts and tools in teams to an own new startup project.",
+    "crumbs": [
+      "Home",
+      "Teaching",
+      "Technology Entrepreneurship"
+    ]
+  },
+  {
+    "objectID": "teaching/tech_ent/index.html#instructors",
+    "href": "teaching/tech_ent/index.html#instructors",
+    "title": "Technology Entrepreneurship",
+    "section": "",
+    "text": "Prof. Dr. Christoph Ihl\nJonas Wilinski, M. Sc.\nJürgen Thiesen, M. Sc.\nOliver Specht, M. Sc.",
+    "crumbs": [
+      "Home",
+      "Teaching",
+      "Technology Entrepreneurship"
+    ]
+  },
+  {
+    "objectID": "teaching/tech_ent/index.html#course-structure",
+    "href": "teaching/tech_ent/index.html#course-structure",
+    "title": "Technology Entrepreneurship",
+    "section": "",
+    "text": "The workflow in this course module is comprised of three elements:\n\n(Flipped) classroom: learning about and discussing concepts and tools currently prevailing in theory and practice of modern technology entrepreneurship.\nProblem-based learning: deepen an understanding of the concepts and tools by seeing them applied and applying them to real company cases.\nExperiential learning: applying the concepts and tools in teams to an own new startup project.",
+    "crumbs": [
+      "Home",
+      "Teaching",
+      "Technology Entrepreneurship"
+    ]
   }
 ]
