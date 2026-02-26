@@ -534,6 +534,7 @@ const links = [
               href={p.url}
               target="_blank"
               rel="noopener noreferrer"
+              data-umami-event={`click--${p.name}`}
             >
               <div class="project-name">{p.name}</div>
               <div class="project-desc">{p.description}</div>
