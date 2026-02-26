@@ -1,0 +1,737 @@
+---
+interface Project {
+  name: string;
+  description: string;
+  tags: string[];
+  url: string;
+  comingSoon?: boolean;
+}
+
+const projects: Project[] = [
+  {
+    name: "science-datalake",
+    description:
+      "Unified data lake of 293M scientific papers from 8 scholarly sources + 13 ontologies (960 GB Parquet, queryable via DuckDB).",
+    tags: ["python", "duckdb", "parquet", "nlp", "scisci"],
+    url: "https://j0nasw.github.io/science-datalake/",
+  },
+  {
+    name: "coming-soon",
+    description: "New project in the works. Stay tuned.",
+    tags: ["???"],
+    url: "#",
+    comingSoon: true,
+  },
+  {
+    name: "coming-soon",
+    description: "New project in the works. Stay tuned.",
+    tags: ["???"],
+    url: "#",
+    comingSoon: true,
+  },
+  {
+    name: "coming-soon",
+    description: "New project in the works. Stay tuned.",
+    tags: ["???"],
+    url: "#",
+    comingSoon: true,
+  },
+  {
+    name: "coming-soon",
+    description: "New project in the works. Stay tuned.",
+    tags: ["???"],
+    url: "#",
+    comingSoon: true,
+  },
+];
+
+const links = [
+  { label: "GitHub", url: "https://github.com/J0nasW" },
+  { label: "LinkedIn", url: "https://linkedin.com/in/jonas-wilinski-a31a35143/" },
+  { label: "Bluesky", url: "https://bsky.app/profile/jonashw.bsky.social" },
+  { label: "HuggingFace", url: "https://huggingface.co/J0nasW" },
+  { label: "ORCID", url: "https://orcid.org/0009-0005-4672-7197" },
+];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Jonas Wilinski</title>
+    <meta
+      name="description"
+      content="Jonas Wilinski — PhD candidate & developer. Selected open-source projects."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script defer src="https://analytics.reforgelabs.com/script.js" data-website-id="b5b34279-4d65-4ede-85aa-ba6f34a374bd"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,600;1,400&display=swap");
+
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --bg: #0a0a0a;
+        --surface: #111111;
+        --border: #1e1e1e;
+        --border-hover: #2a2a2a;
+        --text: #a0a0a0;
+        --text-dim: #555555;
+        --text-bright: #e0e0e0;
+        --accent: #4ade80;
+        --accent-dim: #22563b;
+        --tag-bg: #151515;
+        --tag-text: #707070;
+        --coming-soon-text: #333333;
+      }
+
+      html {
+        font-family: "JetBrains Mono", monospace;
+        background: var(--bg);
+        color: var(--text);
+        font-size: 14px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 960px;
+        padding: 5rem 1.5rem 3rem;
+      }
+
+      /* ---- Top section: Hero + Terminal side by side ---- */
+
+      .top {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: start;
+        padding-bottom: 2.5rem;
+        border-bottom: 1px dashed var(--border);
+      }
+
+      /* ---- Hero (left) ---- */
+
+      .hero-name {
+        font-size: 2rem;
+        font-weight: 600;
+        color: var(--text-bright);
+        letter-spacing: -0.02em;
+        line-height: 1.2;
+      }
+
+      .hero-name .accent {
+        color: var(--accent);
+      }
+
+      .hero-role {
+        margin-top: 0.5rem;
+        font-size: 0.8rem;
+        color: var(--text-dim);
+        font-weight: 300;
+      }
+
+      .hero-bio {
+        margin-top: 1.25rem;
+        font-size: 0.85rem;
+        color: var(--text);
+        line-height: 1.7;
+      }
+
+      .hero-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.25rem 1rem;
+        margin-top: 1.5rem;
+        font-size: 0.75rem;
+      }
+
+      .hero-links a {
+        color: var(--text-dim);
+        text-decoration: none;
+        transition: color 0.15s;
+      }
+
+      .hero-links a:hover {
+        color: var(--accent);
+      }
+
+      .hero-links a::before {
+        content: "~ ";
+        color: var(--accent-dim);
+        font-weight: 600;
+      }
+
+      /* ---- Terminal (right) ---- */
+
+      .terminal {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        height: 320px;
+      }
+
+      .terminal-titlebar {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 0.5rem 0.75rem;
+        background: #0d0d0d;
+        border-bottom: 1px solid var(--border);
+        user-select: none;
+        flex-shrink: 0;
+      }
+
+      .terminal-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+      }
+
+      .terminal-dot.red { background: #ff5f57; }
+      .terminal-dot.yellow { background: #febc2e; }
+      .terminal-dot.green { background: #28c840; }
+
+      .terminal-title {
+        flex: 1;
+        text-align: center;
+        font-size: 0.65rem;
+        color: var(--text-dim);
+        margin-right: 42px;
+      }
+
+      .terminal-body {
+        padding: 0.75rem;
+        overflow-y: auto;
+        font-size: 0.75rem;
+        line-height: 1.5;
+        flex: 1;
+      }
+
+      .terminal-body::-webkit-scrollbar {
+        width: 4px;
+      }
+
+      .terminal-body::-webkit-scrollbar-thumb {
+        background: var(--border-hover);
+        border-radius: 2px;
+      }
+
+      .terminal-history .line {
+        white-space: pre-wrap;
+        word-break: break-word;
+      }
+
+      .terminal-history .line.cmd .sym {
+        color: var(--accent);
+        font-weight: 600;
+      }
+
+      .terminal-history .line.cmd .path {
+        color: var(--text-dim);
+      }
+
+      .terminal-history .line.cmd .txt {
+        color: var(--text-bright);
+      }
+
+      .terminal-history .line.out {
+        color: var(--text);
+      }
+
+      .terminal-history .line.out .hl {
+        color: var(--accent);
+      }
+
+      .terminal-history .line.out .dim {
+        color: var(--text-dim);
+      }
+
+      .terminal-history .line.out .sep {
+        color: var(--border-hover);
+      }
+
+      .terminal-history .line.out .key {
+        color: var(--accent);
+        display: inline-block;
+        min-width: 10ch;
+      }
+
+      .terminal-history .line.out .row {
+        display: flex;
+        gap: 0.5ch;
+      }
+
+      .terminal-history .line.out .row .key {
+        flex-shrink: 0;
+      }
+
+      .terminal-input-line {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+
+      .terminal-input-line .sym {
+        color: var(--accent);
+        font-weight: 600;
+        flex-shrink: 0;
+      }
+
+      .terminal-input-line .path {
+        color: var(--text-dim);
+        flex-shrink: 0;
+      }
+
+      #terminal-input {
+        flex: 1;
+        background: none;
+        border: none;
+        outline: none;
+        color: var(--text-bright);
+        font-family: inherit;
+        font-size: inherit;
+        caret-color: var(--accent);
+      }
+
+      #terminal-input::placeholder {
+        color: var(--text-dim);
+        opacity: 0.6;
+      }
+
+      /* ---- Section labels ---- */
+
+      .section-label {
+        display: block;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        color: var(--text-dim);
+      }
+
+      /* ---- Projects ---- */
+
+      .projects {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+      }
+
+      .project {
+        display: block;
+        padding: 1.25rem 1rem;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        text-decoration: none;
+        color: inherit;
+        transition:
+          border-color 0.2s,
+          background 0.2s;
+      }
+
+      .project:first-child {
+        border-radius: 6px 6px 0 0;
+      }
+
+      .project:last-child {
+        border-radius: 0 0 6px 6px;
+      }
+
+      .project:only-child {
+        border-radius: 6px;
+      }
+
+      .project + .project {
+        border-top: none;
+      }
+
+      .project:not(.is-coming-soon):hover {
+        border-color: var(--border-hover);
+        background: #131313;
+      }
+
+      .project-name {
+        font-weight: 600;
+        color: var(--text-bright);
+        font-size: 0.9rem;
+      }
+
+      .project-name::before {
+        content: "~/";
+        color: var(--accent);
+        font-weight: 400;
+      }
+
+      .project-desc {
+        font-size: 0.8rem;
+        color: var(--text);
+        margin-top: 0.35rem;
+      }
+
+      .project-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-top: 0.6rem;
+      }
+
+      .project-tags span {
+        font-size: 0.7rem;
+        padding: 0.15rem 0.5rem;
+        border-radius: 3px;
+        background: var(--tag-bg);
+        color: var(--tag-text);
+      }
+
+      /* Coming soon cards */
+      .is-coming-soon {
+        cursor: default;
+      }
+
+      .is-coming-soon .project-name {
+        color: var(--coming-soon-text);
+      }
+
+      .is-coming-soon .project-name::before {
+        color: var(--coming-soon-text);
+      }
+
+      .is-coming-soon .project-desc {
+        color: var(--coming-soon-text);
+      }
+
+      .is-coming-soon .project-tags span {
+        color: var(--coming-soon-text);
+        background: var(--bg);
+      }
+
+      /* ---- Footer ---- */
+
+      footer {
+        margin-top: 3rem;
+        padding-top: 1.5rem;
+        border-top: 1px dashed var(--border);
+        font-size: 0.7rem;
+        color: var(--text-dim);
+        text-align: center;
+      }
+
+      footer a {
+        color: var(--text-dim);
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        color: var(--accent);
+      }
+
+      /* ---- Responsive ---- */
+
+      @media (max-width: 680px) {
+        .container {
+          padding: 3rem 1rem 2rem;
+        }
+
+        .top {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+
+        .hero-name {
+          font-size: 1.5rem;
+        }
+
+        .terminal {
+          height: 260px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+
+      <!-- Top: Hero left, Terminal right -->
+      <div class="top">
+        <div class="hero">
+          <h1 class="hero-name">Jonas Wilinski<span class="accent">.</span></h1>
+          <p class="hero-role">PhD Candidate & Developer — TU Hamburg</p>
+          <p class="hero-bio">
+            Researching the diffusion of AI concepts across the global scientific
+            landscape using Natural Language Processing and Large Language Models.
+            Building open-source tools for the scientific ecosystem.
+          </p>
+          <div class="hero-links">
+            {links.map((l) => (
+              <a href={l.url} target="_blank" rel="noopener noreferrer">
+                {l.label}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div class="terminal">
+          <div class="terminal-titlebar">
+            <span class="terminal-dot red"></span>
+            <span class="terminal-dot yellow"></span>
+            <span class="terminal-dot green"></span>
+            <span class="terminal-title">jw@github — ~</span>
+          </div>
+          <div class="terminal-body" id="terminal-body">
+            <div class="terminal-history" id="terminal-history"></div>
+            <div class="terminal-input-line">
+              <span class="sym">&#10095;</span>
+              <span class="path">~</span>
+              <input
+                id="terminal-input"
+                type="text"
+                autocomplete="off"
+                spellcheck="false"
+                placeholder="type help"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects -->
+      <span class="section-label">// projects</span>
+
+      <div class="projects">
+        {projects.map((p) =>
+          p.comingSoon ? (
+            <div class="project is-coming-soon">
+              <div class="project-name">{p.name}</div>
+              <div class="project-desc">{p.description}</div>
+              <div class="project-tags">
+                {p.tags.map((t) => (
+                  <span>{t}</span>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <a
+              class="project"
+              href={p.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="project-name">{p.name}</div>
+              <div class="project-desc">{p.description}</div>
+              <div class="project-tags">
+                {p.tags.map((t) => (
+                  <span>{t}</span>
+                ))}
+              </div>
+            </a>
+          )
+        )}
+      </div>
+
+      <footer>
+        <p>
+          <a href="https://wilinski.me" target="_blank" rel="noopener noreferrer">
+            wilinski.me
+          </a>
+          &nbsp;&middot;&nbsp; Jonas Wilinski &copy; {new Date().getFullYear()}
+        </p>
+      </footer>
+    </div>
+
+    <script>
+      const history = document.getElementById("terminal-history")!;
+      const input = document.getElementById("terminal-input") as HTMLInputElement;
+      const termBody = document.getElementById("terminal-body")!;
+
+      const commands: Record<string, string> = {
+        help: [
+          `<span class="hl">commands:</span>`,
+          `<span class="sep">─────────────────────────────</span>`,
+          `<span class="row"><span class="key">help</span> show this message</span>`,
+          `<span class="row"><span class="key">whoami</span> about me</span>`,
+          `<span class="row"><span class="key">ls</span> list projects</span>`,
+          `<span class="row"><span class="key">cat sci</span> science-datalake</span>`,
+          `<span class="row"><span class="key">stack</span> tech stack</span>`,
+          `<span class="row"><span class="key">links</span> social &amp; web</span>`,
+          `<span class="row"><span class="key">neofetch</span> system info</span>`,
+          `<span class="row"><span class="key">clear</span> clear terminal</span>`,
+        ].join("\n"),
+
+        whoami: [
+          `<span class="hl">Jonas Wilinski</span> <span class="dim">M.Sc.</span>`,
+          `<span class="sep">─────────────────────────────</span>`,
+          `<span class="row"><span class="key">role</span> PhD Candidate</span>`,
+          `<span class="row"><span class="key">at</span> TU Hamburg (TUHH)</span>`,
+          `<span class="row"><span class="key">institute</span> Entrepreneurship</span>`,
+          `<span class="row"><span class="key">research</span> AI diffusion in science</span>`,
+          `<span class="row"><span class="key">methods</span> NLP &amp; LLMs</span>`,
+          `<span class="sep">─────────────────────────────</span>`,
+          `<span class="dim">prev:</span> CTO @ Cargofaces`,
+          `<span class="dim">prev:</span> Porsche AG`,
+          `<span class="dim">prev:</span> Freelance IT`,
+        ].join("\n"),
+
+        ls: [
+          `<span class="dim">total 5</span>`,
+          `<span class="hl">drwxr-xr-x</span>  <span class="hl">science-datalake</span>/`,
+          `<span class="dim">drwx------</span>  <span class="dim">coming-soon</span>/`,
+          `<span class="dim">drwx------</span>  <span class="dim">coming-soon</span>/`,
+          `<span class="dim">drwx------</span>  <span class="dim">coming-soon</span>/`,
+          `<span class="dim">drwx------</span>  <span class="dim">coming-soon</span>/`,
+        ].join("\n"),
+
+        "cat sci": [
+          `<span class="hl">science-datalake</span>`,
+          `<span class="sep">─────────────────────────────</span>`,
+          `<span class="row"><span class="key">papers</span> 293M from 8 sources</span>`,
+          `<span class="row"><span class="key">ontologies</span> 13 (1.3M terms)</span>`,
+          `<span class="row"><span class="key">size</span> 960 GB Parquet</span>`,
+          `<span class="row"><span class="key">query</span> DuckDB</span>`,
+          `<span class="sep">─────────────────────────────</span>`,
+          `<span class="row"><span class="key">doi</span> 10.57967/hf/7850</span>`,
+          `<span class="row"><span class="key">data</span> huggingface.co/datasets/</span>`,
+          `<span class="dim">       J0nasW/science-datalake</span>`,
+        ].join("\n"),
+
+        stack: [
+          `<span class="hl">tech stack</span>`,
+          `<span class="sep">─────────────────────────────</span>`,
+          `<span class="row"><span class="key">lang</span> Python, TypeScript, SQL</span>`,
+          `<span class="row"><span class="key">ml</span> PyTorch, Transformers</span>`,
+          `<span class="row"><span class="key">nlp</span> LangChain, RAG</span>`,
+          `<span class="row"><span class="key">data</span> DuckDB, Parquet, Postgres</span>`,
+          `<span class="row"><span class="key">web</span> Astro, React, Next.js</span>`,
+          `<span class="row"><span class="key">infra</span> Docker, AWS, GCP</span>`,
+          `<span class="row"><span class="key">db</span> Graph &amp; Vector DBs</span>`,
+        ].join("\n"),
+
+        links: [
+          `<span class="hl">links</span>`,
+          `<span class="sep">─────────────────────────────</span>`,
+          `<span class="row"><span class="key">github</span> github.com/J0nasW</span>`,
+          `<span class="row"><span class="key">linkedin</span> in/jonas-wilinski</span>`,
+          `<span class="row"><span class="key">bluesky</span> jonashw.bsky.social</span>`,
+          `<span class="row"><span class="key">hugging</span> huggingface.co/J0nasW</span>`,
+          `<span class="row"><span class="key">orcid</span> 0009-0005-4672-7197</span>`,
+          `<span class="row"><span class="key">web</span> wilinski.me</span>`,
+        ].join("\n"),
+
+        neofetch: [
+          `<span class="hl">    .--.</span>     <span class="hl">jw</span><span class="dim">@</span><span class="hl">github</span>`,
+          `<span class="hl">   |o_o |</span>    <span class="sep">──────────────</span>`,
+          `<span class="hl">   |:_/ |</span>    <span class="key">OS</span> the web`,
+          `<span class="hl">  //   \\ \\</span>   <span class="key">Host</span> j0nasw.github.io`,
+          `<span class="hl"> (|     | )</span>  <span class="key">Shell</span> astro v5`,
+          `<span class="hl">/'\\_ _/\`\\</span>  <span class="key">Theme</span> terminal-dark`,
+          `<span class="hl">\\___)=(___/</span> <span class="key">Font</span> JetBrains Mono`,
+          `<span class="dim">             Uptime</span> since 2024`,
+        ].join("\n"),
+      };
+
+      const cmdHistory: string[] = [];
+      let historyIndex = -1;
+
+      function addLine(html: string, cls: string) {
+        const div = document.createElement("div");
+        div.className = `line ${cls}`;
+        div.innerHTML = html;
+        history.appendChild(div);
+      }
+
+      function scroll() {
+        termBody.scrollTop = termBody.scrollHeight;
+      }
+
+      function run(raw: string) {
+        const cmd = raw.trim().toLowerCase();
+        if (!cmd) return;
+
+        cmdHistory.unshift(cmd);
+        historyIndex = -1;
+
+        addLine(
+          `<span class="sym">&#10095;</span> <span class="path">~</span> <span class="txt">${raw.trim()}</span>`,
+          "cmd"
+        );
+
+        if (cmd === "clear") {
+          history.innerHTML = "";
+          scroll();
+          return;
+        }
+
+        const output = commands[cmd];
+        if (output) {
+          addLine(output, "out");
+        } else {
+          addLine(`not found: ${cmd}. Try <span class="hl">help</span>`, "out");
+        }
+        scroll();
+      }
+
+      input.addEventListener("keydown", (e: KeyboardEvent) => {
+        if (e.key === "Enter") {
+          run(input.value);
+          input.value = "";
+        } else if (e.key === "ArrowUp") {
+          e.preventDefault();
+          if (historyIndex < cmdHistory.length - 1) {
+            historyIndex++;
+            input.value = cmdHistory[historyIndex];
+          }
+        } else if (e.key === "ArrowDown") {
+          e.preventDefault();
+          if (historyIndex > 0) {
+            historyIndex--;
+            input.value = cmdHistory[historyIndex];
+          } else {
+            historyIndex = -1;
+            input.value = "";
+          }
+        } else if (e.key === "l" && e.ctrlKey) {
+          e.preventDefault();
+          history.innerHTML = "";
+        }
+      });
+
+      // auto-type "help" on load for discoverability
+      setTimeout(() => {
+        const demo = "help";
+        let i = 0;
+        const interval = setInterval(() => {
+          input.value += demo[i];
+          i++;
+          if (i >= demo.length) {
+            clearInterval(interval);
+            setTimeout(() => {
+              run(input.value);
+              input.value = "";
+            }, 300);
+          }
+        }, 80);
+      }, 800);
+
+      // keep focus on input when clicking terminal
+      termBody.addEventListener("click", () => input.focus());
+    </script>
+  </body>
+</html>

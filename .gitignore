@@ -1,9 +1,4 @@
-# Quarto related files
-/.quarto/
-/_site/
-/.luarc.json
-
-# Custom files
+node_modules/
+dist/
+.astro/
 .DS_Store
-
-
