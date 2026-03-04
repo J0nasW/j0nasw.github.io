@@ -1,0 +1,63 @@
+---
+const socials = [
+  { label: "GitHub", url: "https://github.com/J0nasW" },
+  { label: "LinkedIn", url: "https://linkedin.com/in/jonas-wilinski-a31a35143/" },
+  { label: "Bluesky", url: "https://bsky.app/profile/jonashw.bsky.social" },
+  { label: "HuggingFace", url: "https://huggingface.co/J0nasW" },
+  { label: "ORCID", url: "https://orcid.org/0009-0005-4672-7197" },
+];
+---
+
+<footer>
+  <div class="footer-links">
+    {
+      socials.map((s, i) => (
+        <>
+          <a href={s.url} target="_blank" rel="noopener noreferrer">
+            {s.label}
+          </a>
+          {i < socials.length - 1 && <span class="sep">&middot;</span>}
+        </>
+      ))
+    }
+  </div>
+  <p class="copyright">
+    Jonas Wilinski &copy; {new Date().getFullYear()}
+  </p>
+</footer>
+
+<style>
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed var(--border);
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    text-align: center;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-links a {
+    color: var(--text-dim);
+    text-decoration: none;
+  }
+
+  .footer-links a:hover {
+    color: var(--accent);
+  }
+
+  .sep {
+    color: var(--border-hover);
+  }
+
+  .copyright {
+    color: var(--text-dim);
+  }
+</style>

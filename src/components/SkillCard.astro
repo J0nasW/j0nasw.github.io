@@ -1,0 +1,316 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  longDescription?: string;
+  status: "public" | "private";
+  install?: string;
+  usage?: string;
+  repo?: string;
+  phases?: string[];
+  venues?: string[];
+  inspiration?: { name: string; url: string };
+}
+
+const {
+  title,
+  description,
+  longDescription,
+  status,
+  install,
+  usage,
+  repo,
+  phases,
+  venues,
+  inspiration,
+} = Astro.props;
+---
+
+<div class="skill-card">
+  <div class="skill-header">
+    <h2 class="skill-name">{title}</h2>
+    <span class:list={["skill-badge", status]}>{status}</span>
+  </div>
+
+  <p class="skill-desc">{longDescription || description}</p>
+
+  {
+    usage && (
+      <div class="skill-block">
+        <span class="block-label">usage</span>
+        <code>{usage}</code>
+      </div>
+    )
+  }
+
+  {
+    install && (
+      <div class="skill-block">
+        <span class="block-label">install</span>
+        <code>{install}</code>
+      </div>
+    )
+  }
+
+  {
+    phases && phases.length > 0 && (
+      <div class="skill-section">
+        <span class="section-label">// how it works</span>
+        <ol class="phases">
+          {phases.map((p) => (
+            <li>{p}</li>
+          ))}
+        </ol>
+      </div>
+    )
+  }
+
+  {
+    venues && venues.length > 0 && (
+      <div class="skill-section">
+        <span class="section-label">// supported venues</span>
+        <div class="venue-tags">
+          {venues.map((v) => (
+            <span>{v}</span>
+          ))}
+        </div>
+      </div>
+    )
+  }
+
+  <div class="skill-cheatsheet">
+    <span class="section-label">// cheat sheet</span>
+    <div class="cheatsheet-content">
+      <slot />
+    </div>
+  </div>
+
+  <div class="skill-footer">
+    {
+      repo && (
+        <a
+          href={repo}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="skill-link"
+          data-umami-event={`click--${title}-repo`}
+        >
+          view on github &rarr;
+        </a>
+      )
+    }
+    {
+      inspiration && (
+        <span class="inspiration">
+          inspired by{" "}
+          <a href={inspiration.url} target="_blank" rel="noopener noreferrer">
+            {inspiration.name}
+          </a>
+        </span>
+      )
+    }
+  </div>
+</div>
+
+<style>
+  .skill-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1.5rem;
+  }
+
+  .skill-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .skill-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-bright);
+  }
+
+  .skill-name::before {
+    content: "/";
+    color: var(--accent);
+    font-weight: 400;
+  }
+
+  .skill-badge {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+  }
+
+  .skill-badge.public {
+    background: var(--accent-dim);
+    color: var(--accent);
+  }
+
+  .skill-badge.private {
+    background: #1a1a2e;
+    color: #7c7cf0;
+  }
+
+  .skill-desc {
+    font-size: 0.8rem;
+    color: var(--text);
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+  }
+
+  .skill-block {
+    margin-bottom: 0.75rem;
+  }
+
+  .block-label {
+    display: block;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+    margin-bottom: 0.3rem;
+  }
+
+  .skill-block code {
+    display: block;
+    font-size: 0.75rem;
+    padding: 0.6rem 0.75rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--accent);
+    overflow-x: auto;
+  }
+
+  .skill-section {
+    margin-top: 1.25rem;
+  }
+
+  .section-label {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    margin-bottom: 0.5rem;
+  }
+
+  .phases {
+    list-style: none;
+    counter-reset: phase;
+  }
+
+  .phases li {
+    counter-increment: phase;
+    font-size: 0.8rem;
+    color: var(--text);
+    padding: 0.3rem 0;
+  }
+
+  .phases li::before {
+    content: counter(phase) ".";
+    color: var(--accent);
+    font-weight: 600;
+    margin-right: 0.5rem;
+  }
+
+  .venue-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .venue-tags span {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    border: 1px solid var(--border);
+  }
+
+  .skill-cheatsheet {
+    margin-top: 1.25rem;
+  }
+
+  .cheatsheet-content :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+  }
+
+  .cheatsheet-content :global(th) {
+    text-align: left;
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid var(--border-hover);
+    color: var(--text-dim);
+    font-weight: 400;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .cheatsheet-content :global(td) {
+    padding: 0.4rem 0.75rem;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+  }
+
+  .cheatsheet-content :global(td code) {
+    color: var(--accent);
+    font-size: 0.75rem;
+  }
+
+  .cheatsheet-content :global(td:first-child) {
+    color: var(--accent);
+    white-space: nowrap;
+  }
+
+  .cheatsheet-content :global(h3) {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    font-weight: 400;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .skill-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--border);
+  }
+
+  .skill-link {
+    font-size: 0.75rem;
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .skill-link:hover {
+    color: var(--text-bright);
+  }
+
+  .inspiration {
+    font-size: 0.7rem;
+    color: var(--text-dim);
+  }
+
+  .inspiration a {
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .inspiration a:hover {
+    color: var(--accent);
+  }
+</style>

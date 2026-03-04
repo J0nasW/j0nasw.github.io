@@ -1,0 +1,64 @@
+---
+const pathname = Astro.url.pathname;
+---
+
+<header>
+  <nav>
+    <a href="/" class="logo">j0nasw<span class="accent">.</span></a>
+    <div class="nav-links">
+      <a href="/" class:list={[{ active: pathname === "/" }]}>home</a>
+      <a
+        href="/skills/"
+        class:list={[{ active: pathname.startsWith("/skills") }]}
+      >
+        claude skills
+      </a>
+    </div>
+  </nav>
+</header>
+
+<style>
+  header {
+    padding: 1.5rem 0;
+    margin-bottom: 1rem;
+    border-bottom: 1px dashed var(--border);
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-bright);
+    text-decoration: none;
+  }
+
+  .logo:hover {
+    color: var(--text-bright);
+  }
+
+  .accent {
+    color: var(--accent);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  .nav-links a {
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: var(--accent);
+  }
+</style>

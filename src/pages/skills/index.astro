@@ -1,0 +1,111 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import SkillCard from "../../components/SkillCard.astro";
+import { getCollection, render } from "astro:content";
+
+const skills = (await getCollection("skills")).sort(
+  (a, b) => a.data.order - b.data.order
+);
+
+const rendered = await Promise.all(
+  skills.map(async (skill) => {
+    const { Content } = await render(skill);
+    return { skill, Content };
+  })
+);
+---
+
+<BaseLayout
+  title="Claude Code Skills — Jonas Wilinski"
+  description="Custom Claude Code skills for academic paper review and HPC cluster management."
+>
+  <div class="container">
+    <Header />
+
+    <section class="skills-intro">
+      <h1 class="page-title">
+        Claude Code Skills<span class="accent">.</span>
+      </h1>
+      <p class="page-desc">
+        <a
+          href="https://docs.anthropic.com/en/docs/claude-code/skills"
+          target="_blank"
+          rel="noopener noreferrer">Skills</a
+        > are reusable prompt templates for
+        <a
+          href="https://docs.anthropic.com/en/docs/claude-code/overview"
+          target="_blank"
+          rel="noopener noreferrer">Claude Code</a
+        > that encode domain expertise into slash commands. Install a skill and
+        invoke it with a single command — Claude handles the rest.
+      </p>
+    </section>
+
+    <div class="skills-list">
+      {
+        rendered.map(({ skill, Content }) => (
+          <SkillCard
+            title={skill.data.title}
+            description={skill.data.description}
+            longDescription={skill.data.longDescription}
+            status={skill.data.status}
+            install={skill.data.install}
+            usage={skill.data.usage}
+            repo={skill.data.repo}
+            phases={skill.data.phases}
+            venues={skill.data.venues}
+            inspiration={skill.data.inspiration}
+          >
+            <Content />
+          </SkillCard>
+        ))
+      }
+    </div>
+
+    <Footer />
+  </div>
+</BaseLayout>
+
+<style>
+  .skills-intro {
+    padding: 2rem 0 2.5rem;
+    border-bottom: 1px dashed var(--border);
+    margin-bottom: 2rem;
+  }
+
+  .page-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-bright);
+    letter-spacing: -0.02em;
+  }
+
+  .accent {
+    color: var(--accent);
+  }
+
+  .page-desc {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: var(--text);
+    line-height: 1.7;
+    max-width: 600px;
+  }
+
+  .page-desc a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .page-desc a:hover {
+    color: var(--text-bright);
+  }
+
+  .skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+</style>
